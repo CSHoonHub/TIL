@@ -51,3 +51,5 @@ public class GameManager : MonoBehaviour
 출처: https://welcomeheesuk.tistory.com/62 [버거덕 게임즈:티스토리]
   </code>
 </pre>
+
+* `private`로 접근을 제한하는 이유는 오직 한개의 인스턴스에만 접근하기 위한 장치이다, 클래스 내부에서만 사용되게끔 제한한다
