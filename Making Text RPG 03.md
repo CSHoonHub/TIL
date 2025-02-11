@@ -3,9 +3,8 @@
 2. 변수나 구조체에서 선언한 값들을 놓치고 참조하여, 오류가 생기거나, `null`로 출력되는 일이 잦았다
 
 다음은 내가 작성한 StoreScene이다
-<pre>
-  <code>
-    using SpartaDungeon.Managers;
+```c#
+using SpartaDungeon.Managers;
 
 namespace SpartaDungeon.Scenes
 {
@@ -150,14 +149,12 @@ namespace SpartaDungeon.Scenes
     }
     
 } 
-  </code>
-</pre>
+```
 
 해당 스토어씬은 ItemManager.cs 파일과 Item.cs 파일의 값들을 많이 참조해서 적었는데 해당 코드는...
 
-<pre>
-  <code>
-    namespace SpartaDungeon
+```c#
+namespace SpartaDungeon
 {
     public interface ItemData
     {
@@ -267,8 +264,7 @@ namespace SpartaDungeon.Scenes
         }
     }
 }
-  </code>
-</pre>
+```
 
 해당 Item.cs 코드를 통해서, 인터페이스에도 get안에서 switch문을 활용할 수 있다는 법을 배울수 있는 기회가 되었다!!!
 
