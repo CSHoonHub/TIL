@@ -4,8 +4,7 @@
 2. 포션을 사용할 수 있는 메서드를 ItemManager.cs에 추가하였다
 
 ## 아이템을 사고 파는 SoldOutItem 메서드 작성
-<pre>
-  <code>
+```c#
     private void SoldOutItem(int i)
   {
       var item = ItemManager.Instance.equipmentList[i];
@@ -19,15 +18,13 @@
               Console.Write($"{item.Price}G");
           }
   }
-  </code>
-</pre>
+```
 
 해당 메서드를 만들어서, storeitemlist에서 바로 아이템을 받아오면서 값을 StoreScene내에서 변경하는 것이 가능했다
 처음에 if문을 좀 더 간결하게 적어볼까 생각도 했지만...아직까지 뾰족한 방법이 생각나지 않았다...
 출력은 이런식으로 동작하게 만들었다,
 
-<pre>
-  <code>
+```c#
 Console.Clear();
 Console.WriteLine("상점에 들어왔습니다!");
 Console.WriteLine($"[보유 골드] {DataManager.Instance.player.data.gold}G\n");
@@ -45,13 +42,11 @@ for (int i = 0; i < storeItems.Count; i++)
     Console.WriteLine();
     Console.ResetColor();
 }
-  </code>
-</pre>
+```
 
 ## 포션을 먹으면, Player에 적용되는 메서드 작성
 
-<pre>
-  <code>
+```c#
   public void UsePotion(Equipment potion)
   {
      var player = DataManager.Instance.player;
@@ -75,8 +70,7 @@ for (int i = 0; i < storeItems.Count; i++)
          }
      }
   }
-  </code>
-</pre>
+```
 
 현재 데이터 매니저에서 작성한 플레이어의 체력과 마나를 가져와, 해당 ownedList에 있는 값을 참조하여 플레이어가 해당 포션이 가지고 있는
 
