@@ -6,19 +6,19 @@ Unity 기본 PPU 값은 100
 텍스처 크기가 100 픽셀 unity에서 1 유닛으로 나온다  
 
 
-- 코드 관리  
+## 코드 관리  
 Awake  
 Start  
 Update  
 ...
 
-충돌처리함수
+## 충돌처리함수
 - OncollisionEnter: 충돌 시작 시 호출
 - OnCollisionStay: 충돌이 유지되는 동안 호출
 - OnCollisionExit: 충돌이 끝났을 때 호출
 - OnTriggerEnter/Stay/Exit: Trigger Collider와의 상호작용을 처리
 
-로컬좌표와 월드 좌표  
+## 로컬좌표와 월드 좌표  
 Unity에서 둘을 측정하는 기준은?  
 - 로컬좌표  
 부모 오브젝트를 기준으로 한 오브젝트의 위치  
@@ -36,14 +36,15 @@ Unity에서 둘을 측정하는 기준은?
 기준이 부모객체가 된것,  
 그리고 Inspector 창에서 보이는 Transform의 값은 부모 좌표 기준으로 화면에 표시가 된다  
 추가로 다른 컴포넌트의 값을 부모가 가지고 있다고 해서 참조 받는것은 아니다  
+< 
 
 
-문제점들  
+## 문제점들  
 ->  스크립트 부착문제  
 유니티가 프로젝트 생성과정에서, Library 폴더가 잘못생성이 되었다  
 껐다가 키는걸로 해결; 아무래도 유니티가 라이브러리를 잘못생성하는 경우가 발생하는거 같다!  
 
--> Obstacle 문제  
+## Obstacle 문제  
 하이어라키 창에서 하위 오브젝트랑 상위 오브젝트를 잘 나뉘어서 정리하였어야 했는데,  
 Obstacles 안에 Obstacle 10개의 Prefab 파일이 있어야 했는데, 그렇지 않았다  
 Obstacles 까지 Prefab화 되어 있었고, 우클릭 후 Unpack Prefab을 통하여 해결하였다  
